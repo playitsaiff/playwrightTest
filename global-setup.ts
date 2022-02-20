@@ -1,7 +1,7 @@
 import { chromium, FullConfig } from "@playwright/test";
 
 async function globalSetup(config: FullConfig) {
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto("https://recruitppe.microsoft.com");
   await page.click("#MicrosoftAccountExchange");
