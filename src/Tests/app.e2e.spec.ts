@@ -6,7 +6,7 @@ let browser: Browser;
 let page: Page;
 let context: BrowserContext;
 test.beforeAll(async () => {
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch({ headless: true });
   context = await browser.newContext({ storageState: "storageState.json" });
 });
 test.afterAll(async () => {
