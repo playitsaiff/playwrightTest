@@ -13,6 +13,7 @@ async function globalSetup(config: FullConfig) {
   await page.press('input[name="passwd"]', "Enter");
   await page.click("#idSIButton9");
   // Save signed-in state to 'storageState.json'.
+  // This will be used later
   await page.context().storageState({ path: "storageState.json" });
   await browser.close();
 }
