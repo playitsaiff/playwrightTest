@@ -10,4 +10,11 @@ test.describe.parallel("travel page", () => {
     const travelPage = new TravelPage(page);
     await travelPage.openThroughLink();
   });
+    test("breakcrum link should work", async ({ page }) => {
+      const travelPage = new TravelPage(page);
+      await travelPage.openThroughLink();
+      await travelPage.clickAllApplicationBreadCrum();
+      await page.pause();
+    });
 });
+
