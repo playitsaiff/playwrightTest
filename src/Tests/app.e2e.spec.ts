@@ -20,16 +20,16 @@ test.describe("describe test", () => {
   // test.afterEach(async () => {
   //   await page.close();
   // });
-  // test("should work", async ({ page }) => {
-  //   await page.goto("https://recruitppe.microsoft.com/");
-  //   await page.waitForTimeout(10000);
-  //   await page.waitForSelector("#appaction");
-  //   await expect(page.locator("h1")).toHaveText("Action Center");
-  // });
-  // test("should work too", async ({ page }) => {
-  //   await page.goto("https://recruitppe.microsoft.com");
-  //   await page.waitForSelector("#appaction");
-  //   await expect(page.locator("h1")).toHaveText("Action Center");
-  //   await expect(page.locator("text=Hi, Akash!").first()).toBeVisible();
-  // });
+  test("should work", async ({ page }) => {
+    await page.goto("https://recruitppe.microsoft.com/");
+    await page.waitForTimeout(10000);
+    await page.waitForSelector("#appaction");
+    await expect(page.locator("h1")).toHaveText("Action Center");
+  });
+  test("should work too", async ({ page }) => {
+    await page.goto("https://recruitppe.microsoft.com");
+    await page.waitForSelector("#appaction");
+    await expect(page.locator("h1")).toHaveText("Action Center");
+    await expect(page.locator("text=Hi, Akash!").first()).toBeVisible();
+  });
 });
