@@ -33,8 +33,8 @@ jobs:
       - name: Install dependencies
         run: yarn
 
-      - name: Install browsers
-        run: npx playwright install
+      - name: Install edge browsers
+        run: npx playwright install msedge
 
       - name: Run tests
         run: yarn test
