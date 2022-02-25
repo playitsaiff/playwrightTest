@@ -20,9 +20,9 @@ export class TravelPage {
     await this.page.goto(
       "https://recruitppe.microsoft.com/actioncenter/travel"
     );
-    await expect(this.page.locator(".ms-Spinner-label ")).toHaveText(
-      "Loading the travel request form..."
-    );
+    await this.page
+      .locator("text=Loading the travel request form...")
+      .waitFor();
     await expect(this.page.locator(".ac-ms-travelRequestNavTitle")).toHaveText(
       "Travel Request"
     );
@@ -43,7 +43,9 @@ export class TravelPage {
     );
   }
   async clickAllApplicationBreadCrum() {
-    await this.page.locator('button:has-text("All applications")').click();
+    await this.page
+      .locator('.ms-Breadcrumb-listItem > button:has-text("All applications")')
+      .click();
     await expect(this.page).toHaveURL(
       "https://recruitppe.microsoft.com/actioncenter/submitted"
     );
