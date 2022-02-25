@@ -30,6 +30,6 @@ test.describe("describe test", () => {
     await page.goto("https://recruitppe.microsoft.com");
     await page.waitForSelector("#appaction");
     await expect(page.locator("h1")).toHaveText("Action Center");
-    await expect(page.locator("text=Hi, Akas!").first()).toBeVisible();
+    await expect(page.locator("text=Hi, Akash!").first()).toBeVisible();
   });
 });
