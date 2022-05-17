@@ -8,11 +8,12 @@ const config: PlaywrightTestConfig = {
   use: {
     //to use    npx playwright install chrome
     channel: "msedge",
-    headless: true,
+
+    headless: false,
     // Tell all tests to load signed-in state from 'storageState.json'.
     storageState: "storageState.json",
     screenshot: "only-on-failure",
-    // trace: "on-first-retry",
+    trace: "on-first-retry",
   },
 };
 export default config;
